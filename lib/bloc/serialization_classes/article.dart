@@ -29,14 +29,18 @@ class ArticlePage {
   String? title;
   String? diagnosis;
   String? publishDate;
+  String? views;
 
-  ArticlePage({this.id, this.title, this.diagnosis, this.publishDate});
+  ArticlePage(
+      {this.id, this.title, this.diagnosis, this.publishDate, this.views});
 
   ArticlePage.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['title'];
     diagnosis = json['diagnosis'];
     publishDate = json['publish_date'];
+    views = json['views'];
+    //(json['views']).toString();
   }
 
   Map<String, dynamic> toJson() {
@@ -45,6 +49,7 @@ class ArticlePage {
     data['title'] = title;
     data['diagnosis'] = diagnosis;
     data['publish_date'] = publishDate;
+    data['views'] = views;
     return data;
   }
 }

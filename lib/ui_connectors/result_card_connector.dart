@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:knowledgebase/bloc/api_caller_classes/get_all_result.dart';
 import 'package:knowledgebase/bloc/enums/environment_variables.dart';
@@ -102,9 +101,11 @@ class ResultCardConnector extends StatelessWidget {
       card.add(Padding(
         padding: const EdgeInsets.only(top: 12),
         child: ResultCard(
-            kb_number: element.id,
-            description: element.diagnosis,
-            title: element.title),
+          kb_number: element.id,
+          description: element.diagnosis,
+          title: element.title,
+          views: element.views,
+        ),
       ));
     }
 
