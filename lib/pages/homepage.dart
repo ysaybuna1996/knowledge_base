@@ -107,7 +107,7 @@ class HomePage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
-                  height: MediaQuery.of(ctx).size.height * 0.43,
+                  height: MediaQuery.of(ctx).size.height * 0.33,
                   width: MediaQuery.of(ctx).size.width,
                   child: Container(
                     decoration: const BoxDecoration(
@@ -133,7 +133,8 @@ class HomePage extends StatelessWidget {
                           const Align(
                             alignment: Alignment.center,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding:
+                                  EdgeInsets.only(left: 20, right: 20, top: 80),
                               child: Divider(
                                 color: Colors.white38,
                                 thickness: 5,
@@ -143,7 +144,8 @@ class HomePage extends StatelessWidget {
                           Align(
                             alignment: Alignment.center,
                             child: Padding(
-                              padding: const EdgeInsets.only(top: 230),
+                              padding:
+                                  const EdgeInsets.only(top: 230, bottom: 30),
                               child: SizedBox(
                                   width: MediaQuery.of(ctx).size.width * 0.60,
                                   child: const Searchbar()),
@@ -158,10 +160,7 @@ class HomePage extends StatelessWidget {
                   height: (MediaQuery.of(ctx).size.height * 0.55),
                   child: const ResultCardConnector(),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 35),
-                  child: Footer(),
-                )
+                const Footer()
               ],
             ),
           ),
