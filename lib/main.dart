@@ -10,7 +10,15 @@ import 'package:provider/provider.dart';
 import 'package:routemaster/routemaster.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
-void main() {
+import 'package:logging/logging.dart';
+
+void main() async {
+  Logger.root.onRecord.listen((LogRecord r) {
+    print('${r.time}: ${r.loggerName}: ${r.level.name}: ${r.message}');
+  });
+
+  Logger.root.level = Level.FINE;
+
   setUrlStrategy(PathUrlStrategy());
   runApp(const AppProviders(child: MyApp()));
 }

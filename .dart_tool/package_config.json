@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "asn1lib",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/asn1lib-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2",
       "packageUri": "lib/",
@@ -40,6 +46,12 @@
     {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "dartdap",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dartdap-0.6.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -98,12 +110,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "intl",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "js",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3",
       "packageUri": "lib/",
@@ -112,6 +118,12 @@
     {
       "name": "lints",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -156,6 +168,12 @@
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "platform",
@@ -296,7 +314,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-27T19:05:15.530861Z",
+  "generated": "2021-10-29T00:00:55.247163Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-178.1.beta"
 }

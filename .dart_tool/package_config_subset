@@ -2,6 +2,10 @@ knowledgebase
 2.12
 file:///C:/Users/10012239/Documents/GitHub/knowledge_base/
 file:///C:/Users/10012239/Documents/GitHub/knowledge_base/lib/
+asn1lib
+2.12
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/asn1lib-1.0.2/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/asn1lib-1.0.2/lib/
 async
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2/
@@ -30,6 +34,10 @@ cupertino_icons
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3/lib/
+dartdap
+2.12
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dartdap-0.6.1/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dartdap-0.6.1/lib/
 fake_async
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/
@@ -54,10 +62,6 @@ http_parser
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/lib/
-intl
-2.12
-file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/
-file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib/
 js
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3/
@@ -66,6 +70,10 @@ lints
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/lib/
+logging
+2.12
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.0.2/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.0.2/lib/
 matcher
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11/
@@ -94,6 +102,10 @@ path_provider_windows
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3/
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3/lib/
+petitparser
+2.14
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0/lib/
 platform
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.2/
