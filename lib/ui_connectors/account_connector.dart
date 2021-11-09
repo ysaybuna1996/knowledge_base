@@ -70,14 +70,14 @@ class AccountConnector extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: const [
                       Icon(
-                        Icons.search_off_outlined,
+                        Icons.logout_rounded,
                         color: Colors.red,
                         size: 50,
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 10),
                         child: Text(
-                          'Unknown error.',
+                          'You\'ve been logout, enter your credentials to regain access.',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, letterSpacing: 1.6),
                         ),
