@@ -1,0 +1,6 @@
+{
+    "dart.flutterTestAdditionalArgs": [
+        "--no-sound-null-safety"
+    ],
+    "testing.defaultGutterClickAction": "debug"
+}

@@ -2,9 +2,12 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:knowledgebase/bloc/api_caller_classes/get_account.dart';
+import 'package:knowledgebase/bloc/enums/environment_variables.dart';
+import 'package:knowledgebase/bloc/providers_list/end_drawer_content.dart';
 import 'package:knowledgebase/bloc/theme_classes/darkmode_provider.dart';
 import 'package:knowledgebase/pages/article_viewer.dart';
-import 'package:knowledgebase/router/routing.dart';
+import 'package:knowledgebase/ui_connectors/account_connector.dart';
 import 'package:knowledgebase/ui_connectors/quick_links_connector.dart';
 import 'package:knowledgebase/ui_connectors/result_card_connector.dart';
 import 'package:knowledgebase/widgets/footer.dart';
@@ -31,9 +34,11 @@ class HomePage extends StatelessWidget {
     });
     return Scaffold(
       key: scf,
-      endDrawer: Drawer(
-          backgroundColor: Theme.of(context).canvasColor,
-          child: const QuickLinksConnector()),
+      endDrawer: Consumer(builder: (_, EndDrawerProvider endDrawerProvider, __) {
+        return endDrawerProvider.endDrawerPref == EndDrawerPref.quickLinks
+            ? const Drawer(child: QuickLinksConnector())
+            : const AccountConnector();
+      }),
       drawerEdgeDragWidth: 0,
       drawer: Container(
         color: Theme.of(context).canvasColor,
@@ -82,19 +87,18 @@ class HomePage extends StatelessWidget {
         ),
         elevation: 0,
         actions: [
-          Consumer(builder:
-              (BuildContext ctx, DarkModeSwitcher darkModeSwitcher, _) {
+          Consumer(builder: (BuildContext ctx, EndDrawerProvider edp, _) {
             return Tooltip(
-              message: "Toggle between dark and light mode.",
+              message: "Settings",
               child: IconButton(
-                  onPressed: () {
-                    //scaffoldKey.currentState?.openDrawer();
-                    darkModeSwitcher.isDarkMode = !darkModeSwitcher.isDarkMode;
-                    RoutingMap.routeDelegate.popRoute();
-                  },
-                  icon: Icon(darkModeSwitcher.isDarkMode
-                      ? Icons.light_mode
-                      : Icons.dark_mode)),
+                onPressed: () {
+                  //scaffoldKey.currentState?.openDrawer();
+                  edp.endDrawerPref = EndDrawerPref.account;
+                  Provider.of<GetAccount>(context, listen: false).getData();
+                  scf.currentState!.openEndDrawer();
+                },
+                icon: const Icon(Icons.settings),
+              ),
             );
           })
         ],

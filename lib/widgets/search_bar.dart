@@ -40,13 +40,13 @@ class _SearchbarState extends State<Searchbar> {
           child: TextFormField(
             controller: _textController,
             onChanged: (text) async {
-              if (text.toString().length >= 3) {
+              /* if (text.toString().length >= 3) {
                 Future.delayed(const Duration(milliseconds: 600), () {
                   reset(context, text);
                 });
               }
 
-              return;
+              return;*/
             },
             onFieldSubmitted: (text) {
               reset(context, text);

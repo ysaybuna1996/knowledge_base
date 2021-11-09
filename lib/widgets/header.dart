@@ -1,14 +1,18 @@
 // ignore_for_file: avoid_web_libraries_in_flutter, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:knowledgebase/bloc/enums/environment_variables.dart';
+import 'package:knowledgebase/bloc/providers_list/end_drawer_content.dart';
 import 'package:knowledgebase/local_preference/custom_icons/c_icons.dart';
 import 'dart:html' as html;
+
+import 'package:provider/provider.dart';
 
 class Header extends StatelessWidget {
   GlobalKey<ScaffoldState>? scf;
   Header({Key? key, required this.scf}) : super(key: key);
 
-  List<Widget> headerContent() {
+  List<Widget> headerContent(BuildContext ctx) {
     return [
       Padding(
         padding: const EdgeInsets.only(left: 15, right: 50),
@@ -190,6 +194,7 @@ class Header extends StatelessWidget {
         padding: const EdgeInsets.only(left: 15, right: 50),
         child: InkWell(
           onTap: () {
+            Provider.of<EndDrawerProvider>(ctx, listen: false).endDrawerPref = EndDrawerPref.quickLinks;
             scf!.currentState?.openEndDrawer();
           },
           child: Card(
@@ -230,8 +235,8 @@ class Header extends StatelessWidget {
           physics: const AlwaysScrollableScrollPhysics(),
           scrollDirection: Axis.horizontal,
           primary: false,
-          children: List.generate(headerContent().length,
-              (index) => headerContent().elementAt(index))),
+          children: List.generate(headerContent(context).length,
+              (index) => headerContent(context).elementAt(index))),
     );
   }
 }

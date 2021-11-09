@@ -1,16 +1,16 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:knowledgebase/bloc/api_caller_classes/get_account.dart';
 import 'package:knowledgebase/bloc/api_caller_classes/get_all_result.dart';
 import 'package:knowledgebase/bloc/api_caller_classes/get_quick_links.dart';
 import 'package:knowledgebase/bloc/providers_list/app_providers.dart';
+import 'package:knowledgebase/bloc/providers_list/end_drawer_content.dart';
 import 'package:knowledgebase/bloc/theme_classes/dark_theme_styles.dart';
 import 'package:knowledgebase/bloc/theme_classes/darkmode_provider.dart';
 import 'package:knowledgebase/router/routing.dart';
 import 'package:provider/provider.dart';
 import 'package:routemaster/routemaster.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-
-import 'package:logging/logging.dart';
 
 void main() async {
   setUrlStrategy(PathUrlStrategy());
@@ -23,8 +23,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of the application.
   @override
   Widget build(BuildContext context) {
-    return Consumer3(builder: (_, DarkModeSwitcher darkModeSwitcher,
-        GetArticle getArticle, GetQuickLinks getQuickLinks, __) {
+    return Consumer5(builder: (_,
+        DarkModeSwitcher darkModeSwitcher,
+        GetArticle getArticle,
+        GetQuickLinks getQuickLinks,
+        EndDrawerProvider endDrawerProvider,
+        GetAccount getAccount,
+        __) {
       return MaterialApp.router(
         routerDelegate: RoutingMap.routeDelegate,
         routeInformationParser: const RoutemasterParser(),

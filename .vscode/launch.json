@@ -5,22 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         
+        
         {
             "name": "knowledgebase",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--no-sound-null-safety"
+            ]
         },
         {
             "name": "knowledgebase (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "flutterMode": "profile",
+            "args": [
+                "--no-sound-null-safety"
+            ]
         },
         {
             "name": "knowledgebase (debug mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "debug"
+            "flutterMode": "debug",
+            "args": [
+                "--no-sound-null-safety"
+            ]
         }
         
     ]

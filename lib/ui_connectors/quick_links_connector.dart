@@ -112,7 +112,7 @@ class QuickLinksConnector extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 10),
                 child: Text(
-                  'No results found. Please narrow your query and try again.',
+                  'Unknown error.',
                   style: TextStyle(
                       fontWeight: FontWeight.bold, letterSpacing: 1.6),
                 ),

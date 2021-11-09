@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart';
 import 'package:knowledgebase/bloc/api_caller_classes/api.dart';
@@ -69,8 +68,9 @@ class GetArticle extends ChangeNotifier {
         Article art = Article.fromJson(jsonResponse);
         articlePages = art.data!;
         totalPage = art.page!;
+        debugPrint('halakas$totalPage');
         if (articlePages.isEmpty) {
-          debugPrint('pumasok');
+          //debugPrint('pumasok');
           processResponse = ProcessResponse.noDataReceived;
           return;
         }
