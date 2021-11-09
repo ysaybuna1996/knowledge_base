@@ -75,11 +75,14 @@ class AccountConnector extends StatelessWidget {
                         size: 50,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 10),
-                        child: Text(
-                          'You\'ve been logout, enter your credentials to regain access.',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, letterSpacing: 1.6),
+                        padding: EdgeInsets.only(top: 10,left: 10, right: 10),
+                        child: Center(
+                          child: Text(
+                            'You\'ve been logout, enter your credentials to regain access.',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, letterSpacing: 1.6),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ],
