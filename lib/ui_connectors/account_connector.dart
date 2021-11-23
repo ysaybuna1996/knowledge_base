@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:knowledgebase/bloc/api_caller_classes/get_account.dart';
 import 'package:knowledgebase/bloc/enums/environment_variables.dart';
+import 'package:knowledgebase/bloc/server_configs/server_configuration.dart';
 import 'package:knowledgebase/bloc/theme_classes/darkmode_provider.dart';
+import 'package:knowledgebase/router/routing.dart';
 import 'package:provider/provider.dart';
 import 'dart:html' as html;
 
@@ -44,15 +47,15 @@ class AccountConnector extends StatelessWidget {
                             title: const Text('Logout'),
                             leading: const Icon(Icons.logout_rounded),
                             onTap: () async {
-                              await Provider.of<GetAccount>(context,listen: false).logout();
-                              html.window.location.reload();
+                               Provider.of<GetAccount>(context,listen: false).logout();
+                               RoutingMap.routeDelegate.replace('/logout');
                             },
                           )
                         ],
                         subtitle: Text(getAccount.account.email!),
                           title: Text(getAccount.account.name!),
                           leading: CircleAvatar(
-                            child: Text (_parser(getAccount.account.name!),),
+                            child: Text (_parser(getAccount.account.name!),style: const TextStyle(fontSize: 5),),
                             backgroundColor: Colors.teal,
                           )),
                       SwitchListTile(
@@ -68,23 +71,8 @@ class AccountConnector extends StatelessWidget {
                   child = Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Icons.logout_rounded,
-                        color: Colors.red,
-                        size: 50,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10,left: 10, right: 10),
-                        child: Center(
-                          child: Text(
-                            'You\'ve been logout, enter your credentials to regain access.',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, letterSpacing: 1.6),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
+                    children:  const [
+                      Text('You\'ve been logged out', textAlign: TextAlign.center,)
                     ],
                   );
                 }

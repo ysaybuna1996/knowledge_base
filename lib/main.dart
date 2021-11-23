@@ -13,6 +13,7 @@ import 'package:routemaster/routemaster.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void main() async {
+  debugPrint = (String? message, {int? wrapWidth}) {};//Activate this code when developing.
   setUrlStrategy(PathUrlStrategy());
   runApp(const AppProviders(child: MyApp()));
 }
